@@ -1,2 +1,9 @@
 class AccountLog
-end 
+
+  attr_reader :history
+
+  def initialize
+    @history = []
+  end
+
+end
