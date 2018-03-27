@@ -14,7 +14,9 @@ class Account
   end
 
   def make_withdrawal(number)
+    raise "You canot withdraw more than #{@balance} dolars." if @balance - number < 0
     @balance -= number
   end
 
 end
+#

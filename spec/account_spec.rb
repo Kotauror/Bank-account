@@ -31,10 +31,10 @@ describe Account do
         account.make_withdrawal(30)
         expect(account.balance).to eq 20
       end
-      # it 'raises error wen the money is not available' do
-      #   account.make_deposit(50)
-      #   expect(account.make_withdrawal(51)).to raise_error "You canot withdraw more than 50 dolars."
-      # end
+      it 'raises error wen the money is not available' do
+        account.make_deposit(50)
+        expect{account.make_withdrawal(51)}.to raise_error "You canot withdraw more than 50 dolars."
+      end
     end
   end
 
