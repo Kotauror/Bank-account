@@ -27,4 +27,15 @@ describe AccountLog do
     end
   end
 
+  context 'Showing the records' do
+    describe '#show_log' do
+      it 'shows the log' do
+        account_log.add_record(2017/03/06, 500, 0, 500)
+        account_log.add_record(2017/03/06, 0, 200, 300)
+        expect{account_log.show_log}.to output("date | credit | debit | balance\n112 | 0 | 200 | 300\n112 | 500 | 0 | 500\n"
+        ).to_stdout
+      end
+    end
+  end
+
 end

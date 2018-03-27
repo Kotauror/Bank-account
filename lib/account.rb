@@ -26,4 +26,8 @@ class Account
     Time.now.to_date
   end
 
+  def show_log
+    @account_log.show_log
+  end
+
 end

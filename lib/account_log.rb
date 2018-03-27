@@ -17,4 +17,11 @@ class AccountLog
     @history << hash
   end
 
+  def show_log
+    puts "date | credit | debit | balance"
+    @history.reverse.map { |hash|
+      puts "#{hash[:date]} | #{hash[:credit]} | #{hash[:debit]} | #{hash[:balance]}"
+    }
+  end
+
 end
