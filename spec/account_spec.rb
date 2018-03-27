@@ -15,4 +15,13 @@ describe Account do
     end
   end
 
+  context 'Deposition' do
+    describe '#make_deposit' do
+      it 'increases the balance by a given number' do
+        account.make_deposit(50)
+        expect(account.balance).to eq 50
+      end
+    end
+  end
+
 end

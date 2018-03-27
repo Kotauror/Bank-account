@@ -9,4 +9,8 @@ class Account
     @account_log = AccountLog.new
   end
 
+  def make_deposit(number)
+    @balance += number
+  end
+
 end
