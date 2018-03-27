@@ -24,6 +24,9 @@ describe AccountLog do
         account_log.add_record(2017/03/06, 0, 200, 300)
         expect(account_log.history).to eq [{date: 2017/03/06, credit: 500, debit: 0, balance: 500}, {date: 2017/03/06, credit: 0, debit: 200, balance: 300}]
       end
+      it 'informs that a record was added' do
+        expect(account_log.add_record(2017/03/06, 500, 0, 500)).to eq "Record has been added"
+      end
     end
   end
 

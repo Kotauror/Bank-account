@@ -15,6 +15,7 @@ class AccountLog
     hash[:debit] = debit
     hash[:balance] = balance
     @history << hash
+    return "Record has been added"
   end
 
   def show_log
