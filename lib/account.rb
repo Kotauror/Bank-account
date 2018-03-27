@@ -13,4 +13,8 @@ class Account
     @balance += number
   end
 
+  def make_withdrawal(number)
+    @balance -= number
+  end
+
 end
