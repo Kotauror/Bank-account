@@ -1,11 +1,41 @@
 # Bank tech test at Makers Academy
 
+Simple bank account program written in Ruby at week 10 of Makers Academy.
+
+## How to:
+* Run the program:
+
+```plain
+$ git clone https://github.com/Kotauror/Bank-account
+```
+
+>If you don't have a bundler - tool to track and install gems - run $ gem install bundler
+
+```plain
+$ bundle
+$ cd Bank-account
+$ irb  // See the example of use below
+```  
+
+* Run the tests:
+
+```plain
+$ cd Bank-account
+$ rspec -fd
+```
+
+* See test coverage (100%):
+
+```plain
+$ cd Bank-account/coverage
+$ open index.html
+```
+
 ## Requirements
 
 You should be able to interact with your code via a REPL like IRB or the JavaScript console. (You don't need to implement a command line interface that takes input from STDIN.)
 
-Account statement (date, amount, balance) printing.
-Data can be kept in memory (it doesn't need to be stored to a database or anything).
+Account statement (date, amount, balance) printing. Data can be kept in memory (it doesn't need to be stored to a database or anything).
 
 Given a client makes a deposit of 1000 on 10-01-2012
 And a deposit of 2000 on 13-01-2012
