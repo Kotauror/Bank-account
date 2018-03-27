@@ -9,11 +9,17 @@ class AccountLog
   end
 
   def add_record(date, credit, debit, balance)
-    hash = Hash.new
-    hash[:date] = date
-    hash[:credit] = credit
-    hash[:debit] = debit
-    hash[:balance] = balance
+    hash = {
+      :date => date,
+      :credit => credit,
+      :debit => debit,
+      :balance => balance
+    }
+    # hash = Hash.new
+    # hash[:date] = date
+    # hash[:credit] = credit
+    # hash[:debit] = debit
+    # hash[:balance] = balance
     @history << hash
     return "Record has been added"
   end
