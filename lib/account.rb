@@ -1,6 +1,8 @@
 require_relative 'account_log'
+require_relative 'printer'
 require 'date'
 require 'time'
+
 
 class Account
 

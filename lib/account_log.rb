@@ -1,11 +1,13 @@
 require 'date'
+require_relative 'printer'
 
 class AccountLog
 
-  attr_reader :history
+  attr_reader :history, :printer
 
   def initialize
     @history = []
+    @printer = Printer.new
   end
 
   def add_record(date, credit, debit, balance)
@@ -25,10 +27,7 @@ class AccountLog
   end
 
   def show_log
-    puts "date | credit | debit | balance"
-    @history.reverse.map { |hash|
-      puts "#{hash[:date]} | #{hash[:credit]} | #{hash[:debit]} | #{hash[:balance]}"
-    }
+    @printer.print_log(@history)
   end
 
 end

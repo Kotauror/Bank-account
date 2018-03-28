@@ -10,6 +10,9 @@ describe AccountLog do
       it 'has an empty array - history of transactions' do
         expect(account_log.history).to eq []
       end
+      it 'creates a new instance of Printer class' do
+        expect(account_log.printer).to be_a_kind_of Printer
+      end
     end
   end
 
@@ -26,17 +29,6 @@ describe AccountLog do
       end
       it 'informs that a record was added' do
         expect(account_log.add_record(2017/03/06, 500, 0, 500)).to eq "Record has been added"
-      end
-    end
-  end
-
-  context 'Showing the records' do
-    describe '#show_log' do
-      it 'shows the log' do
-        account_log.add_record(2017/03/06, 500, 0, 500)
-        account_log.add_record(2017/03/06, 0, 200, 300)
-        expect{account_log.show_log}.to output("date | credit | debit | balance\n112 | 0 | 200 | 300\n112 | 500 | 0 | 500\n"
-        ).to_stdout
       end
     end
   end

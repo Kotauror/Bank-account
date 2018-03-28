@@ -60,7 +60,9 @@ date || credit || debit || balance
 `AccountLog` class:
 * adds records to the history;
 * has history of transactions;
-* shows history of transactions;
+
+`Printer` class:
+* prints history of transactions;
 
 #### Testing
 * All tests passing;
